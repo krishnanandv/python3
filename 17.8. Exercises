@@ -1,0 +1,27 @@
+
+d = ['good morning', 'hello', 'chair', 'python', ['music', 'flowers', 'facebook', 'instagram', 'snapchat', ['On my Own', 'monster', 'Words dont come so easily', 'lead me right']], 'Stressed Out', 'Pauver Coeur', 'Reach for Tomorrow', 'mariners song', 'Wonder sleeps here']
+m_list=[]
+st=[]
+for l1 in d:
+    if type(l1) is list:
+        for l2 in l1:
+            if type(l2) is list:
+                for word in l2:
+                    st.append(word)
+            
+            else:
+                st.append(l2)
+        
+    
+    
+    else:
+        st.append(l1)
+        
+#print(st)
+for word in st:
+    if 'm' in word:
+        m_list.append(word)
+        
+        
+
+

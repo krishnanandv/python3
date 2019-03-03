@@ -1,0 +1,6 @@
+
+nested = [['dog', 'cat', 'horse'], ['frog', 'turtle', 'snake', 'gecko'], ['hamster', 'gerbil', 'rat', 'ferret']]
+for l1 in nested:
+    for word in l1:
+        if word == 'snake':
+            output = word

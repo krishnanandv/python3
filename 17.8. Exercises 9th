@@ -1,0 +1,36 @@
+
+pokemon = {'Trainer1':
+          {'normal': {'rattatas':15, 'eevees': 2, 'ditto':1}, 'water': {'magikarps':3}, 'flying': {'zubats':8, 'pidgey': 12}},
+          'Trainer2':
+          {'normal': {'rattatas':25, 'eevees': 1}, 'water': {'magikarps':7}, 'flying': {'zubats':3, 'pidgey': 15}},
+          'Trainer3':
+          {'normal': {'rattatas':10, 'eevees': 3, 'ditto':2}, 'water': {'magikarps':2}, 'flying': {'zubats':3, 'pidgey': 20}},
+          'Trainer4':
+          {'normal': {'rattatas':17, 'eevees': 1}, 'water': {'magikarps':9}, 'flying': {'zubats':12, 'pidgey': 14}}}
+
+d=pokemon
+word={}
+
+for k, v in d.items():
+    if isinstance(v, dict):
+        for x, y in v.items():
+            #print(x)
+            if isinstance(y, dict):
+                for a,b in y.items():
+                    if a in word:
+                        word[a] +=b
+                    else:
+                        word[a] = b
+                
+      
+    else:
+        print("{0} : {1}".format(k, v))
+print(word)
+r=word['rattatas']
+e=word['eevees']
+d=word['ditto']
+p=word['pidgey']
+
+
+
+

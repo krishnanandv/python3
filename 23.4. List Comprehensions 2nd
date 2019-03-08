@@ -1,0 +1,13 @@
+
+tester = {'info': [{"name": "Lauren", 'class standing': 'Junior', 'major': "Information Science"},{'name': 'Ayo', 'class standing': "Bachelor's", 'major': 'Information Science'}, {'name': 'Kathryn', 'class standing': 'Senior', 'major': 'Sociology'}, {'name': 'Nick', 'class standing': 'Junior', 'major': 'Computer Science'}, {'name': 'Gladys', 'class standing': 'Sophomore', 'major': 'History'}, {'name': 'Adam', 'major': 'Violin Performance', 'class standing': 'Senior'}]}
+
+
+import json
+#print(json.dumps(tester,indent=2))
+inner_list=tester['info']
+#print(len(inner_list))
+#for a in inner_list:
+    #print(a)
+
+compri = [d['name'] for d in inner_list]
+print(compri)

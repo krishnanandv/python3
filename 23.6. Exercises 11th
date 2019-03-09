@@ -1,0 +1,6 @@
+
+def longlengths(strings):
+    print(strings)
+    lenn=(list(len(word) for word in strings if len(word)>4))
+    return(lenn)
+

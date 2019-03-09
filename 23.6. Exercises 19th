@@ -13,8 +13,8 @@ inner=tester['info']
 import json
 #print(json.dumps(tester,indent=2))
 clas = list(d['important classes'] for d in inner)
-class_sched=[]
-for each_list in clas:
-    for item in each_list:
-        class_sched.append(item)
+class_sched=[y for x in clas for y in x]
+#for each_list in clas:
+#    for item in each_list:
+#        class_sched.append(item)
 print(class_sched)

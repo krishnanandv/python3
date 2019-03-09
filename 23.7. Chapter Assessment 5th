@@ -1,0 +1,3 @@
+
+students = [('Tommy', 95), ('Linda', 63), ('Carl', 70), ('Bob', 100), ('Raymond', 50), ('Sue', 75)]
+passed = [w[0] for w in students if w[1]>=70]

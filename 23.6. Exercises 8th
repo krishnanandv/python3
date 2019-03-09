@@ -1,0 +1,12 @@
+
+def longwords(strings):
+    """Return a shorter list of strings containing only the strings with more than four characters. Use manual accumulation."""
+    # write your code here
+    short=[]
+    for word in strings:
+        if len(word)>=4:
+            short.append(word)
+    print(short)
+    return(short)
+            
+

@@ -1,0 +1,6 @@
+
+things = [3, 5, -4, 7]
+
+test= list(map(lambda num:num+1,things))
+print(test)
+

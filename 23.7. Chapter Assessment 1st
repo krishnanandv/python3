@@ -1,0 +1,3 @@
+
+lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
+map_testing = map(lambda str:("Fruit: "+str),lst_check)

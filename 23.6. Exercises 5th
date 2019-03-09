@@ -1,0 +1,10 @@
+
+things = [3, 5, -4, 7]
+def positives_Acc(things):
+    positive=[]
+    for num in things:
+        if num>0:
+            positive.append(num)
+    return(positive)
+            
+                    

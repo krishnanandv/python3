@@ -1,0 +1,7 @@
+
+def longwords_Fil(strings):
+    """Return a shorter list of strings containing only the strings with more than four characters. Use the filter function."""
+    # write your code here
+    short=filter(lambda word:len(word)>4, strings)
+    return(short)
+

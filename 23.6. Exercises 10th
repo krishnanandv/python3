@@ -1,0 +1,6 @@
+
+def longwords_Li_Comp(strings):
+    """Return a shorter list of strings containing only the strings with more than four characters. Use a list comprehension."""
+    # write your code here
+    return(list(word for word in strings if len(word)>4))
+

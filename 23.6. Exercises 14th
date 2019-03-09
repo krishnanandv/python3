@@ -1,0 +1,8 @@
+
+def sumSquares(L):
+    sq=map(lambda num:num*num , L)
+    total=sum(sq)
+    return(total)
+
+nums = [3, 2, 2, -1, 1]
+

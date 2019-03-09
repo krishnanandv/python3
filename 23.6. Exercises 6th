@@ -1,0 +1,6 @@
+
+things = [3, 5, -4, 7]
+def positives_Fil(things):
+    positive=list(filter(lambda num:num>0, things))
+    print(positive)
+    return(positive)

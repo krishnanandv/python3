@@ -1,0 +1,14 @@
+
+def sumSquares(L):
+    square =[]
+    total=0
+    for num in L:
+        square.append(num*num)
+    print(square)
+    for s in square:
+        total=total+s
+    print(total)
+    return(total)
+
+nums = [3, 2, 2, -1, 1]
+

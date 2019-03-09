@@ -1,0 +1,12 @@
+
+def onelist(lst):
+    result = []
+    for each_list in lst:
+        for item in each_list:
+            result.append(item)
+    print(result)
+    return result
+
+
+L = [["hi", "bye"], ["hello", "goodbye"], ["hola", "adios", "bonjour", "au revoir"]]
+result2=onelist(L)

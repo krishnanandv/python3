@@ -1,0 +1,33 @@
+import requests_with_caching
+import json
+def get_movies_from_tastedive(n):
+    baseurl = "https://tastedive.com/api/similar"
+    params_dict = {}
+    params_dict["q"] = n
+    params_dict["type"] = "movies"
+    params_dict["limit"] = 5
+    resp = requests_with_caching.get(baseurl, params=params_dict)
+    #print(type(resp))
+    item_ds = resp.json()
+    #print(resp.json().text)
+    #print(resp.text)
+    #print(resp.url)
+    #print(type(item_ds))
+    value = item_ds['Similar']
+    return (item_ds)
+
+def extract_movie_titles(dic):
+    
+    print(dic)
+    res=dic['Similar']['Results']
+    print(type(res))
+    print("-------------------")
+    movies=[]
+    for mov in res:
+        movies.append(mov['Name'])
+    return(movies)
+    
+
+# some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+a1= extract_movie_titles(get_movies_from_tastedive("Tony Bennett"))
+a2= extract_movie_titles(get_movies_from_tastedive("Black Panther"))

@@ -1,0 +1,24 @@
+import requests
+import requests_with_caching
+import json
+
+def get_movie_data(s):
+    baseurl = "http://www.omdbapi.com/"
+    params_dict = {}
+    params_dict = {'t':s,'r':'json'}
+    resp = requests_with_caching.get(baseurl,params=params_dict)
+    print(resp.url)
+    #print(resp.text)
+    item_ds = resp.json()
+    return item_ds
+def get_movie_rating(m):
+    itemList = m['Ratings']
+    value = 0
+    for item in itemList:
+        if item['Source'] == "Rotten Tomatoes":
+            value = int(item['Value'].strip('%'))
+    return value
+
+
+# some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
+get_movie_rating(get_movie_data("Deadpool 2"))
